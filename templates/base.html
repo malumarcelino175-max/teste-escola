@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema Escolar</title>
+    <link rel="stylesheet" href="{% static 'alunos/css/estilo.css' %}">
+</head>
+<body>
+    <header>
+        <img src="{% static 'alunos/img/logo.png' %}" alt="Logo Escola" width="80">
+        <h1>Gestão de Alunos - IFRN</h1>
+        <nav>
+            <a href="{% url 'home' %}">Home</a> |
+            <a href="{% url 'alunos:lista' %}">Lista de Alunos</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2026 IFRN - Protótipo de Gestão Escolar</p>
+    </footer>
+</body>
+</html>
